@@ -1,0 +1,20 @@
+name: Mi primer workflow
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  ejemplo:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Descargar el repositorio
+        uses: actions/checkout@v4
+
+      - name: Mostrar un mensaje
+        run: echo "¡Hola desde GitHub Actions!"
+
+      - name: Mostrar la fecha
+        run: date
